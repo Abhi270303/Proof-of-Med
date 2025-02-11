@@ -1,18 +1,61 @@
-## Proof of Med
-![logo-color](https://github.com/armanthepythonguy/ZK-Med-CircuitBreaker/assets/66505181/a85b956e-18e8-4c2d-ab4c-f0b44b0c7461)
+# Proof of Med
+
+## Overview
+**Proof of Med** is a decentralized solution that ensures the authenticity of medical prescriptions in online pharmacy transactions using **Zero-Knowledge Proofs (ZKPs)**. By leveraging **Noir for circuit design**, **Sindri for proof generation**, **zkVerify for on-chain verification**, and **Arbitrum Sepolia for blockchain execution**, Proof of Med provides a trustless system that mitigates fraudulent prescriptions while maintaining patient privacy.
+
+## **Key Features**
+- **Privacy-Preserving Prescription Verification**: Validates prescriptions without exposing sensitive patient data.
+- **Decentralized & Secure**: Uses **Arbitrum Sepolia** for verifiable and immutable prescription records.
+- **Scalable Proof Generation**: Utilizes **Sindri's proof market** to offload computationally intensive ZKP generation.
+- **Seamless Integration for Pharmacies**: Ensures only legitimate prescriptions are fulfilled, preventing unauthorized medication orders.
+
+## **Technical Stack**
+| Component               | Technology |
+|------------------------|------------|
+| **ZK Circuit Design**  | Noir |
+| **Proof Generation**   | Sindri Proof Market |
+| **Proof Verification** | zkVerify Attestation |
+| **Smart Contract**     | Solidity (Arbitrum Sepolia) |
+| **Frontend**           | Next.js, Ethers.js |
+
+## Contract Information
+- **Network:** Arbitrum Sepolia
+- **Contract Address:** `0x2B6002EbDfa9c1DD4c8B1bAE809cE4eC90246A3C`
+
+## How It Works
+1. **Prescription Input**
+   - Doctors input prescription details, including patient information, medication name, dosage, and other relevant details.
+
+2. **ZK Circuit Execution**
+   - A **Noir-based ZK circuit** is used to validate the prescription’s integrity without revealing private patient data.
+
+3. **Proof Generation**
+   - **Sindri** generates a ZK proof for the prescription data, ensuring scalability and efficiency in the verification process.
+
+4. **On-Chain Proof Verification**
+   - The ZK proof is submitted to **ZKVerify**, which checks the proof’s validity before allowing the prescription to proceed.
+
+5. **Order Fulfillment**
+   - Once verified, the pharmacy processes the order, ensuring that only legitimate prescriptions lead to medication dispensing.
+
+## Smart Contract Roles
+- **Owner** – Administers the contract and assigns roles.
+- **Doctor** – Authorized to issue prescriptions.
+- **Pharmacy** – Manages inventory and fulfills orders based on verified prescriptions.
 
 
-Online pharmacies have revolutionized the way people access medications, providing convenience and accessibility. However, ensuring the authenticity of medical prescriptions in online transactions remains a critical challenge. We utilize ZKPs to verify the authenticity of medical prescriptions in online pharmacy transactions, mitigating the risk of fraudulent prescriptions and enhancing trust between patients, doctors, and pharmacies.
+## Future Roadmap
+- **Integration with IPFS** for prescription storage.
+- **Onboarding real-world pharmacies** for pilot testing.
+- **Enhancing ZK circuit efficiency** for faster proof generation.
 
-Prescription Input Interface: Doctors input essential prescription details into our system. This includes patient information, medication details, dosage, and any other pertinent information required for the prescription.
+## **Contributors**
+- **[Abhishek Yadav]** - Developer & Architect
 
-Zero-Knowledge (ZK) with Noir: We construct a Zero-Knowledge Circuit using the Noir DSL, which serves as the basis for generating Zero-Knowledge Proofs. The circuit is designed to validate the integrity and authenticity of prescription data without disclosing sensitive information.
+## License
+MIT License
 
-Zero-Knowledge Proof Generation: The Sindri proof market is utilized to generate Zero-Knowledge Proofs based on the input provided by the doctor. This offloads the computationally intensive task of proof generation from the client's machine to a specialized service, ensuring efficient processing and scalability.
+---
+🚀 **Proof of Med brings security, privacy, and decentralization to online prescriptions.**
 
-Prescription Validation: Using the generated Zero-Knowledge Proof, the prescription data is securely validated by the pharmacy. This ensures that only legitimate prescriptions, verified through the ZK proof, are accepted for medication orders.
 
-Order Fulfillment: Once the prescription is validated, the pharmacy proceeds with the medication order, dispensing only the medications prescribed by the doctor and verified through the ZK proof. This ensures adherence to the prescribed treatment plan and prevents unauthorized medication orders.
-
-# Arbitrum Sepolia Contract Address
-ZK-Med Core :- 0x2B6002EbDfa9c1DD4c8B1bAE809cE4eC90246A3C
