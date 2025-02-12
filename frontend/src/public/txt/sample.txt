@@ -1,0 +1,45 @@
+API 1
+When connect wallet call an api to check if they have nick name else a form to pop up to submit nickname along with address
+
+ Add form:
+Transaction 1
+Add form(Create Challenge)
+Platform(dropdown)
+profit % 
+Holdings(dropdown multiple)
+
+Public proof: challenges
+Genrated Proof: My challenges
+
+Challenges:
+API1 2, Sign, API 3
+Challenges:
+On click one pop up
+connected person address
+API with arg challenge Id , address Get my profit
+Response as integer
+once response revceived change button to sign
+Sign message with amount as string
+Address, sign message, amount, challenge ID
+
+My challenges:
+Transaction 2
+During wallet connect API call get all MY challenges part of user.
+Click on my challenge and get all list of proofs. scroll list with button verify. When clicked on verify make an api call with challenge id, proof id. In response proof and nick name
+Transaction with proof and nick name and all other details. If verified show pop up Proof proved
+
+My challenges:
+Profit %
+Platform
+Holdings 
+Number of proofs generated
+
+
+
+
+
+
+
+
+
+

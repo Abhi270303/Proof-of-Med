@@ -1,0 +1,310 @@
+.doctor-main{
+  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.client-main{
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.content{
+    width: 400px; 
+    border-radius: 10px;
+    padding: 40px 30px;
+  opacity: 0.8;
+    box-shadow: -3px -3px 20px #312f2fa2,
+                3px 3px 17px rgba(57, 51, 56, 0.671);
+   
+  }
+  .content-login{
+    width: 500px; 
+    border-radius: 10px;
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  opacity: 0.8;
+    box-shadow: -3px -3px 20px #312f2fa2,
+                3px 3px 17px rgba(57, 51, 56, 0.671);
+   min-height: 500px;
+}
+
+.btn-upload{
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.btn-add{
+font-size:12px;
+background: whitesmoke;
+border-radius: 10px;
+padding: 1px;
+margin-top: 10px;
+opacity:0.8;
+font-family: "Outfit", sans-serif;
+}
+.btn-nextpage{
+  font-size:22px;
+background: whitesmoke;
+border-radius: 20px;
+padding: 8px 16px 8px 16px;
+font-family: "Outfit", sans-serif;
+}
+
+.form-doc{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+row-gap: 18px;
+  }
+ .single{
+    height:30px;
+    background-color: white;
+    border-radius: 10px;
+    padding:12px;
+    opacity: 0.7;
+    color:black;
+    font-size: large;
+    outline: none;
+    border: none;
+    width:100%;
+    font-family: "Outfit", sans-serif;
+  }
+  .multiple{
+    height:30px;
+    background-color: white;
+    border-radius: 10px;
+    padding:12px;
+    opacity: 0.7;
+    color:black;
+    font-size: large;
+    outline: none;
+    border: none;
+    width:80%;
+    font-family: "Outfit", sans-serif;
+  }
+  input[type="text"]{
+    background-color: white;
+  }
+  h1{
+    font-family: "Outfit", sans-serif;
+  }
+  input::placeholder {
+   color:black;
+   font-size: medium;
+   /* position: absolute; */
+   pointer-events: none;
+   /* left: 4px;
+   top: 2px; */
+   opacity:0.7;
+   font-family: "Outfit", sans-serif;
+  }
+  .inner-form{
+   display: flex;
+   flex-direction: column;
+   row-gap: 4px;
+   justify-content: center;
+   align-items: center;
+   
+  }
+  .btn-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:inherit;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 80%;
+  }
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Browse Files';
+    display: inline-block;
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 5px 8px;
+    background-color: white;
+    border: none;
+    display: flex;
+    height:20px;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    /* border-radius: 20px; */
+    font-family: "Outfit", sans-serif;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  .btn-sign{
+    /* background-color: #DD7F57; */
+      background-color: white;
+    border: none;
+    display: flex;
+    height:20px;
+    background-color: white;
+    border-radius: 20px;
+    padding:12px;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    /* border-radius: 20px; */
+        font-family: "Outfit", sans-serif;
+  }
+  .btn-pay{
+    /* background-color: #DD7F57; */
+      background-color: white;
+    border: none;
+    display: flex;
+    height:20px;
+    background-color: white;
+    border-radius: 20px;
+    padding:12px;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 20px; */
+        
+  }
+  .btn{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+  }
+  button{
+    background: none;
+    border:none;
+  }
+  .login-header{
+    color:white;
+    width: 400px; 
+  }
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap:"4px";
+  }
+  .form-innercontent{
+    display:flex;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: flex-start;
+    color: white;
+  }
+
+  .file-upload-content {
+    text-align: center;
+  }
+  
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #e6ede9;
+    position: relative;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+    border: 4px dashed #ffffff;
+  }
+  
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .drag-text h2 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ebf1ee;
+    padding: 60px 60px;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  .nav-client{
+    margin-top: 10px;
+    margin-left: 90px;
+    font-family: "Outfit", sans-serif;
+    color: whitesmoke;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .drag-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+  }
+  .drag-file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height:250px;
+  }

@@ -1,0 +1,96 @@
+.nav-main{
+    /* display:flex; */
+    /* background-color: #d4d4d4; */
+    /* justify-content: space-between;
+    align-items: center; */
+    /* border-color: rgba(255,255,255); */
+    width:100%;
+    /* border: 1px solid rgba(255,255,255,0.4); */
+   padding: 2px 8px 2px 8px; 
+}
+.text-cont{
+  
+    padding-left: 40%;
+}
+.token-container{
+    border: 1px solid #4E9282;
+    background-color:#8783AF;
+    border-radius: 20px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    font-family: "Outfit", sans-serif;
+    color: white;
+}
+.right-nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.button-connect{
+    /* background-color: rgba(255,255,255,0.8); */
+    color:white;
+    font-weight:700;
+    font-family: "Outfit", sans-serif;
+    font-size:24px;
+    border:none;
+    padding: 2%;
+    cursor: pointer;
+}
+.footer-main{
+    /* display:flex; */
+    background-color: rgba(255,255,255,0.4);
+    /* border: 1px solid rgba(255,255,255,0.4); */
+    padding: 2px 6px 2px 6px;
+    /* justify-content: space-between;
+    align-items: center; */
+    width:100%;
+}
+.dropbtn {
+    background-color: whitesmoke;
+    color: black;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:120px;
+    border-radius: 20px;
+    font-family: "Outfit", sans-serif;
+  }
+  .btn-login{
+    background: none;
+    border:none;
+    font-family: "Outfit", sans-serif;
+  }
+  .list-item{
+    width:140px;
+    list-style: none ;
+     text-align:start;
+     text-align: center;
+     height:30px;
+     padding:4px;
+     cursor:pointer;
+    text-decoration: none;
+  border-bottom: 1px solid black;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  font-family: "Outfit", sans-serif;
+  }
+.list-main{
+  margin-top: 4px;
+  display: flex;
+  row-gap: 2px;
+  flex-direction: column;
+  width:140px;
+  max-height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+  
+  
+  

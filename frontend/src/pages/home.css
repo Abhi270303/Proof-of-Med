@@ -1,0 +1,67 @@
+.about-container{
+    position:relative;
+}
+.main-div{
+    height:100%;
+}
+.about-us{
+    color:white;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+p{
+    text-align: start;
+}
+.circle-form{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    border: 1px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0px 0px -150px;
+}
+.outercircle-form{
+    border-radius: 50%;
+    height: 320px;
+    width: 320px;
+    border: 1px solid white;
+    position: relative;
+}
+
+.user-image{
+    cursor: pointer;
+}
+.content-login{
+    position: relative;
+    width: 400px; 
+    border-radius: 10px;
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+  opacity: 1;
+    box-shadow: -3px -3px 20px #312f2fa2,
+                3px 3px 17px rgba(57, 51, 56, 0.671);
+}
+.built-container{
+   position: relative;
+}
+
+.bc12799c-08af-7ab7-6cb6-dec627744427{
+    position:sticky;
+    padding:0;
+    border: 1px solid red;
+}
+.logo-header{
+   position: relative;
+   color:whitesmoke;
+   font-size: 450px;
+   font-weight:900;
+   display: block;
+   font-family: "Arges";
+   padding-top:0;
+   margin-top: 5%;
+}
