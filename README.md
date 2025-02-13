@@ -1,19 +1,19 @@
 # Proof of Med
 
 ## Overview
-**Proof of Med** is a decentralized solution that ensures the authenticity of medical prescriptions in online pharmacy transactions using **Zero-Knowledge Proofs (ZKPs)**. By leveraging **Noir for circuit design**, **Sindri for proof generation**, **zkVerify for on-chain verification**, and **Arbitrum Sepolia for blockchain execution**, Proof of Med provides a trustless system that mitigates fraudulent prescriptions while maintaining patient privacy.
+**Proof of Med** is a decentralized solution that ensures the authenticity of medical prescriptions in online pharmacy transactions using **Zero-Knowledge Proofs (ZKPs)**. By leveraging **Noir for circuit design**, **Noir Ultraplonk for proof generation**, **zkVerify for on-chain verification**, and **Arbitrum Sepolia for blockchain execution**, Proof of Med provides a trustless system that mitigates fraudulent prescriptions while maintaining patient privacy.
 
 ## **Key Features**
 - **Privacy-Preserving Prescription Verification**: Validates prescriptions without exposing sensitive patient data.
 - **Decentralized & Secure**: Uses **Arbitrum Sepolia** for verifiable and immutable prescription records.
-- **Scalable Proof Generation**: Utilizes **Sindri's proof market** to offload computationally intensive ZKP generation.
+- **Scalable Proof Generation**: Utilizes **Noir Ultraplonk's proof ** to intensive ZKP generation.
 - **Seamless Integration for Pharmacies**: Ensures only legitimate prescriptions are fulfilled, preventing unauthorized medication orders.
 
 ## **Technical Stack**
 | Component               | Technology |
 |------------------------|------------|
 | **ZK Circuit Design**  | Noir |
-| **Proof Generation**   | Sindri Proof Market |
+| **Proof Generation**   | Noir Ultraplonk |
 | **Proof Verification** | zkVerify Attestation |
 | **Smart Contract**     | Solidity (Arbitrum Sepolia) |
 | **Frontend**           | Next.js, Ethers.js |
@@ -30,7 +30,7 @@
    - A **Noir-based ZK circuit** is used to validate the prescription’s integrity without revealing private patient data.
 
 3. **Proof Generation**
-   - **Sindri** generates a ZK proof for the prescription data, ensuring scalability and efficiency in the verification process.
+   - **Noir Ultraplonk** generates a ZK proof for the prescription data, ensuring scalability and efficiency in the verification process.
 
 4. **On-Chain Proof Verification**
    - The ZK proof is submitted to **ZKVerify**, which checks the proof’s validity before allowing the prescription to proceed.
