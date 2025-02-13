@@ -1,0 +1,11 @@
+{
+  "root": "0xdb079aef2667bbc715ba8590025c869d3d26c38590a1a52adce08bd8c567a86b",
+  "proof": [
+    "0xfccbdd66cee1f80bfd8daadb49aea89ee6654bdfa5147dda39030cf10f455e6b",
+    "0x68513a10848031d864135623d5fc6c2e8d0fd5d7f2be244c168059ed54457c28"
+  ],
+  "numberOfLeaves": 4,
+  "leafIndex": 0,
+  "leaf": "0xb050939c16005d6fe9fafcce112fa14fa82105d40b1ffd6157a702586fdc47f0",
+  "attestationId": 44056
+}
