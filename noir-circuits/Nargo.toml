@@ -2,6 +2,6 @@
 name = "zk_med"
 type = "bin"
 authors = [""]
-compiler_version = "0.28.0"
+compiler_version = "1.0.0"
 
 [dependencies]

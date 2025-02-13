@@ -1,24 +1,24 @@
-export const baseSepNetwork = {
-  id: 84532,
-  network: "Base Sepolia",
-  name: "Base Sepolia Testnet",
+export const eduChainNetwork = {
+  id: 421614,
+  network: "Arbitrum Sepolia",
+  name: "Arbitrum Sepolia (Testnet)",
   nativeCurrency: {
     name: "ETH",
-    symbol: "ETH", 
+    symbol: "ETH",
     decimals: 18,
   },
   rpcUrls: {
     default: {
-      http: ["https://sepolia.base.org"],
+      http: ["https://sepolia-rollup.arbitrum.io/rpc"],
     },
     public: {
-      http: ["https://sepolia.base.org"],
+      http: ["https://sepolia-rollup.arbitrum.io/rpc"],
     },
   },
   blockExplorers: {
     default: {
       name: "Explorer",
-      url: "https://sepolia-explorer.base.org",
+      url: "sepolia.arbiscan.io",
     },
   },
 };

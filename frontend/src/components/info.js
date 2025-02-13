@@ -23,7 +23,7 @@ const Info = () => {
             <div className="grid grid-cols-2">
               <div className="border-r pr-10">
                 <div className="flex">
-                  <div className="bg-[#FED72C] px-8 py-4 rounded-2xl shadow-[#FED72C]/20 shadow-lg text-xs text-background">
+                  <div className="bg-[#EA580B] px-8 py-4 rounded-2xl shadow-[#EA580B]/20 shadow-lg text-xs text-background">
                     <p>Setting up reports</p>
                   </div>
                 </div>

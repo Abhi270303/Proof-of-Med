@@ -79,7 +79,7 @@ const Actions = () => {
       </div>
       <div className="grid grid-cols-2">
         <div className="relative flex items-center">
-          <div className="relative w-36 h-36 bg-yellow-300 text-background rounded-full mr-[-2rem] flex flex-col items-center justify-center p-4">
+          <div className="relative w-36 h-36 bg-[#EA580B] text- rounded-full mr-[-2rem] flex flex-col items-center justify-center p-4">
             <div className="text-2xl font-bold">+30%</div>
             <div className="text-sm text-center mt-1">
               Speed up your onchain Medical Orders
@@ -96,7 +96,7 @@ const Actions = () => {
           </div>
         </div>
         <div className="pl-20" ref={containerRef}>
-          <div className="max-h-full w-full overflow-hidden bg-yellow-300 rounded-[50px] text-background text-[7rem] text-nowrap">
+          <div className="max-h-full w-full overflow-hidden bg-[#EA580B] rounded-[50px] text-background text-[7rem] text-nowrap">
             <p
               ref={textRef}
               className="transition-transform duration-75 ease-out inline-block"
@@ -112,13 +112,15 @@ const Actions = () => {
       <div className="border-t mt-16 pt-16 grid grid-cols-12">
         <div className="col-span-6 text-muted-foreground font-light">
           Explore traffic sources, page behavior, conversions and more to gain
-          deep insight into your audience. With us, your business doesn&apos;t just
-          adapt - it evolves
+          deep insight into your audience. With us, your business doesn&apos;t
+          just adapt - it evolves
         </div>
         <div className="col-span-2"></div>
         <div className="col-span-4 grid grid-cols-2 gap-4">
-          <Button variant="secondary" className='rounded-xl'>Request a demo</Button>
-          <Button className='rounded-xl'>Start for free</Button>
+          <Button variant="secondary" className="rounded-xl">
+            Request a demo
+          </Button>
+          <Button className="rounded-xl">Start for free</Button>
         </div>
       </div>
     </div>

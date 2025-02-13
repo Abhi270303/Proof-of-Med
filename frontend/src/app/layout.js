@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Yapster.ai",
-  description: "We only talk about verfied yaps nothin else, HEHE!:)",
+  title: "Proof of Med",
+  description: "We only talk about zk verfied prescription nothin else, HEHE!:)",
 };
 
 export default function RootLayout({ children }) {
@@ -24,9 +25,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

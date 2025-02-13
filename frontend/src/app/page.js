@@ -14,8 +14,8 @@ export default function Page() {
       <Landing />
       <div className="hidden md:block">
         <Info />
-        <Actions />
-        <TweetGridDemo />
+        {/* <Actions /> */}
+        {/* <TweetGridDemo /> */}
         <MainAction />
         <Footer />
       </div>

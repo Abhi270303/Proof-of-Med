@@ -1,159 +1,572 @@
-export const AI_CONTRACT_ADDRESS = "0x563443797a20950cb5E8B63eB902c614820d2969";
+export const CONTRACT_ADDRESS = "0x2c271Ff5de61949fD7121d80493d7CcdF78E601B";
 
-export const AI_CONTRACT_ABI = [
+export const CONTRACT_ABI = [
   {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_zkVerify",
+        type: "address",
+      },
+      {
+        internalType: "bytes32",
+        name: "_vkey",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "nonpayable",
     type: "constructor",
-    inputs: [
-      {
-        name: "_aiOracleAddress",
-        type: "address",
-        internalType: "address",
-      },
-    ],
-    stateMutability: "nonpayable",
   },
   {
-    type: "function",
-    name: "aiOracle",
     inputs: [],
-    outputs: [
-      { name: "", type: "address", internalType: "contract IAIOracle" },
-    ],
-    stateMutability: "view",
+    name: "AccessControlBadConfirmation",
+    type: "error",
   },
   {
-    type: "function",
-    name: "aiOracleCallback",
-    inputs: [
-      { name: "requestId", type: "uint256", internalType: "uint256" },
-      { name: "output", type: "bytes", internalType: "bytes" },
-      { name: "callbackData", type: "bytes", internalType: "bytes" },
-    ],
-    outputs: [],
-    stateMutability: "nonpayable",
-  },
-  {
-    type: "function",
-    name: "calculateYaps",
-    inputs: [
-      { name: "modelId", type: "uint256", internalType: "uint256" },
-      { name: "input", type: "string", internalType: "string" },
-    ],
-    outputs: [],
-    stateMutability: "payable",
-  },
-  {
-    type: "function",
-    name: "callbackGasLimit",
-    inputs: [{ name: "", type: "uint256", internalType: "uint256" }],
-    outputs: [{ name: "", type: "uint64", internalType: "uint64" }],
-    stateMutability: "view",
-  },
-  {
-    type: "function",
-    name: "erc7007",
-    inputs: [],
-    outputs: [{ name: "", type: "address", internalType: "contract ERC7007" }],
-    stateMutability: "view",
-  },
-  {
-    type: "function",
-    name: "estimateFee",
-    inputs: [{ name: "modelId", type: "uint256", internalType: "uint256" }],
-    outputs: [{ name: "", type: "uint256", internalType: "uint256" }],
-    stateMutability: "view",
-  },
-  {
-    type: "function",
-    name: "isFinalized",
-    inputs: [{ name: "requestId", type: "uint256", internalType: "uint256" }],
-    outputs: [{ name: "", type: "bool", internalType: "bool" }],
-    stateMutability: "view",
-  },
-  {
-    type: "function",
-    name: "requestPending",
-    inputs: [{ name: "", type: "uint256", internalType: "uint256" }],
-    outputs: [{ name: "", type: "bool", internalType: "bool" }],
-    stateMutability: "view",
-  },
-  {
-    type: "function",
-    name: "requestPrompt",
-    inputs: [{ name: "", type: "uint256", internalType: "uint256" }],
-    outputs: [{ name: "", type: "bytes", internalType: "bytes" }],
-    stateMutability: "view",
-  },
-  {
-    type: "event",
-    name: "AIGCDataRequested",
     inputs: [
       {
-        name: "requestId",
-        type: "uint256",
-        indexed: true,
-        internalType: "uint256",
-      },
-      {
-        name: "modelId",
-        type: "uint256",
-        indexed: false,
-        internalType: "uint256",
-      },
-      {
-        name: "sender",
-        type: "address",
-        indexed: false,
         internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "bytes32",
+        name: "neededRole",
+        type: "bytes32",
       },
     ],
+    name: "AccessControlUnauthorizedAccount",
+    type: "error",
+  },
+  {
     anonymous: false,
-  },
-  {
-    type: "event",
-    name: "AIGCDataUpdated",
     inputs: [
       {
-        name: "tokenId",
-        type: "uint256",
-        indexed: true,
+        indexed: false,
         internalType: "uint256",
+        name: "_medId",
+        type: "uint256",
       },
       {
-        name: "aigcData",
-        type: "bytes",
         indexed: false,
-        internalType: "bytes",
+        internalType: "uint256",
+        name: "_quantity",
+        type: "uint256",
       },
       {
-        name: "proof",
-        type: "bytes",
-        indexed: false,
-        internalType: "bytes",
-      },
-      {
-        name: "proofType",
-        type: "string",
         indexed: false,
         internalType: "string",
+        name: "_address",
+        type: "string",
       },
     ],
-    anonymous: false,
+    name: "MedicineOrder",
+    type: "event",
   },
   {
-    type: "error",
-    name: "UnauthorizedCallbackSource",
+    anonymous: false,
     inputs: [
       {
-        name: "expected",
-        type: "address",
-        internalType: "contract IAIOracle",
+        indexed: true,
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
       },
       {
-        name: "found",
-        type: "address",
-        internalType: "contract IAIOracle",
+        indexed: true,
+        internalType: "bytes32",
+        name: "previousAdminRole",
+        type: "bytes32",
+      },
+      {
+        indexed: true,
+        internalType: "bytes32",
+        name: "newAdminRole",
+        type: "bytes32",
       },
     ],
+    name: "RoleAdminChanged",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "sender",
+        type: "address",
+      },
+    ],
+    name: "RoleGranted",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "sender",
+        type: "address",
+      },
+    ],
+    name: "RoleRevoked",
+    type: "event",
+  },
+  {
+    inputs: [],
+    name: "DEFAULT_ADMIN_ROLE",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "DOCTOR_ROLE",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "OWNER_ROLE",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "PHARMACY_ROLE",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "PROVING_SYSTEM_ID",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_doctor",
+        type: "address",
+      },
+    ],
+    name: "addDoctor",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_medId",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_quantity",
+        type: "uint256",
+      },
+    ],
+    name: "addInventory",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "_name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "_composition",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "_mg",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_price",
+        type: "uint256",
+      },
+    ],
+    name: "addMedicine",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_pharmacy",
+        type: "address",
+      },
+    ],
+    name: "addPharmacy",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "_hash",
+        type: "bytes32",
+      },
+      {
+        internalType: "uint256",
+        name: "_attestationId",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes32[]",
+        name: "_merklePath",
+        type: "bytes32[]",
+      },
+      {
+        internalType: "uint256",
+        name: "_leafCount",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_index",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "_userAddress",
+        type: "string",
+      },
+      {
+        internalType: "uint256[]",
+        name: "_details",
+        type: "uint256[]",
+      },
+    ],
+    name: "buyMedicine",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "_hash",
+        type: "bytes32",
+      },
+      {
+        internalType: "uint256",
+        name: "_attestationId",
+        type: "uint256",
+      },
+      {
+        internalType: "bytes32[]",
+        name: "_merklePath",
+        type: "bytes32[]",
+      },
+      {
+        internalType: "uint256",
+        name: "_leafCount",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_index",
+        type: "uint256",
+      },
+    ],
+    name: "checkHash",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256[]",
+        name: "_details",
+        type: "uint256[]",
+      },
+    ],
+    name: "getPrice",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "totalPrice",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+    ],
+    name: "getRoleAdmin",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "grantRole",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "hasRole",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "medCount",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "medicines",
+    outputs: [
+      {
+        internalType: "string",
+        name: "name",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "composition",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "mg",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "price",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "quantityAvailable",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "pharmacy",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "callerConfirmation",
+        type: "address",
+      },
+    ],
+    name: "renounceRole",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "role",
+        type: "bytes32",
+      },
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "revokeRole",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4",
+      },
+    ],
+    name: "supportsInterface",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "vkey",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "zkVerify",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
   },
 ];
