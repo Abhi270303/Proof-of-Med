@@ -20,7 +20,7 @@
 
 ## Contract Information
 - **Network:** Arbitrum Sepolia
-- **Contract Address:** `0x2B6002EbDfa9c1DD4c8B1bAE809cE4eC90246A3C`
+- **Contract Address:** `0x2c271Ff5de61949fD7121d80493d7CcdF78E601B`
 
 ## How It Works
 1. **Prescription Input**
