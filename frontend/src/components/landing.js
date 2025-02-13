@@ -14,14 +14,14 @@ const Landing = () => {
               <img src={"/icons/line-dotted.svg"} className="w-8" alt="dotted line" />
             </div>
             <div className="text-center leading-none -translate-x-4">
-              <p className="text-[6rem] font-medium">Ensuring Secure</p>
+              <p className="text-[6rem] font-medium">Ensuring Onchain</p>
             </div>
           </div>
           <div className="text-[6rem] leading-none mt-2">
             <p className="flex items-center justify-center">
-              <span>&</span>
+              <span></span>
               <span className="mx-4">
-                Private Prescription
+                Medicine Prescription
               </span>
             </p>
           </div>
